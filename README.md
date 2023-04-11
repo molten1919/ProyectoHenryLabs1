@@ -12,7 +12,13 @@ Se ha logró ejecutar correctamente las consultas en la api creada con la url pr
 
 ### Uso
 
-Hay cinco consultas que se pidieron, y cada una de ellas está en un endpoint diferente de la API, así, para ejecutar la primera consulta
+Hay cinco consultas que se pidieron, y cada una de ellas está en un endpoint diferente de la API, así, para ejecutar la primera consulta, a la dirección URL proporcionada se le añade la siguiente instrucción:
+
+"/get_word_count/{plataforma}/{keyword}"
+
+y se introduce la plataforma requerida (en {plataforma}) y el keyword que se quiere buscar (en {keyword}). Por ejemplo, si se quiere buscar en la plataforma Netflix cuantas veces aparece el keyword 'love', habría que pegar lo siguiente, completando la URL:
+
+"/get_word_count/{Netflix}/{love}"
 
 
 Con el objetivo de disponibilizar los datos mediante una API
