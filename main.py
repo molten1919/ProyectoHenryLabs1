@@ -4,12 +4,12 @@ import pandas as pd
 # se instancia un objeto
 app = FastAPI()
 
-# endpoint 1
+# endpoint 0
 # @app.get("/")
 # def read_root():
   #  return {"Prueba": "de deploy en local"}
 
-# endpoint 2
+# endpoint 1
 @app.get("/items/{item_id}")
 def read_item(item_id: int):
     return {"item_id": item_id}
@@ -22,6 +22,7 @@ df_concatenado = pd.read_csv('https://github.com/molten1919/ProyectoHenryLabs1/b
 keyword = ''
 lista_plataformas = ['netflix', 'disney', 'hulu', 'amazon']
 
+# endpoint 2
 @app.get('/')
 def index():
     return {'message':'Welcome to the API! ',
