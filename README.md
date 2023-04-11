@@ -4,7 +4,7 @@ A a partir de cuatro archivos csv que contienen datos e información de cuatro s
 
 Se escribió el códidgo para las queries que irían en el desarrollo de la api, estas queries vienen en el archivo 'Consultas_Api.ipynb'. Este código se fué pasando al archivo 'main.py' donde se montó la api (usando fastapi) y Deta para hacer el deployment en la nube.
 
-Se ha logró ejecutar correctamente las consultas en la api creada con la url proporcionada por Deta.
+Se ha logró ejecutar correctamente cada consulta en la api creada con la url proporcionada por Deta.
 
 ### Requisitos
 
@@ -16,10 +16,17 @@ Hay cinco consultas que se pidieron, y cada una de ellas está en un endpoint di
 
 "/get_word_count/{plataforma}/{keyword}"
 
-y se introduce la plataforma requerida (en {plataforma}) y el keyword que se quiere buscar (en {keyword}). Por ejemplo, si se quiere buscar en la plataforma Netflix cuantas veces aparece el keyword 'love', habría que pegar lo siguiente, completando la URL:
+Se introduce la plataforma requerida (en {plataforma}) y el keyword que se quiere buscar (en {keyword}). Por ejemplo, si se quiere buscar en la plataforma Netflix cuantas veces aparece el keyword 'love', habría que pegar lo siguiente, completando la URL:
 
 "/get_word_count/{Netflix}/{love}"
 
+Esto nos devolverá el núemero de veces que aparece el keyword 'love' en la plataforma Netflix.
+
+La segunda consulta devuelve la cantidad de películas por plataforma con un puntaje mayor al introducido por el ususario, para determinado año. Se completa la URL como en el caso anterior, pero con la siguiente instrucción:
+
+/get_score_count/{plataforma}/{puntaje}/{anio}
+
+Donde 'plataforma' puede tomar los valores de Netflix, hulu, Disney, o Amazon, 'puntaje' es un número entero dado por el usuario, y 'anio' es el año requerido por el mismo.
 
 Con el objetivo de disponibilizar los datos mediante una API
 En este proyecto se realizó un trabajo de EDA, ETL, y deployment de una API a partir de 4 archivos csv. Se realizaron 5 transformaciones de esos archivos, cuyo método viene en el archivo 'Transformaciones.ipynb'. 
